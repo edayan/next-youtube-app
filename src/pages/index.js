@@ -1,3 +1,3 @@
-export default function Index() {
-return <h1>Index page</h1>
-}
+import HomePage from '../containers/Homepage'
+
+export default HomePage;
