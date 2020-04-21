@@ -1,9 +1,14 @@
 import {useRouter} from 'next/router'
-export default function person() {
+export default function person({owners}) {
 
 const router= useRouter();
-console.log(router.query);
 
+return <pre>{JSON.stringify(owners, null, 4)}</pre>
+}
 
-return <h1>{router.query.person}'s {router.query.vehicle}</h1>
+person.getInitialProps = async () => {
+    const response = await fetch(`http://localhost:4001/data?vehicle=CAR`);
+    const ownersList = await response.json();
+    console.log('ownersList', ownersList);
+    return { owners: ownersList }
 }
