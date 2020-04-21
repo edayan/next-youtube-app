@@ -1,13 +1,20 @@
 
 import Link from 'next/link';
+import { useState, useEffect } from 'react'
+import fetch from 'isomorphic-unfetch'
 
-const owners = [
-    {vehicle: 'Car', ownerName: 'Saju'},
-    {vehicle: 'Bike', ownerName: 'John'},
-    {vehicle: 'Airplane', ownerName: 'Mick'},
-]
-export default function List() {
+export default function List({ owners }) {
 
+    // const [owners, setOwners] = useState([]);
+
+    // useEffect(() => {
+    //     async function loadData() {
+    //         const response = await fetch('http://localhost:4001/data');
+    //         const ownersList = await response.json();
+    //         setOwners(ownersList);
+    //     }
+    //     loadData();
+    // }, []);
 
     return (
         <div>
@@ -22,4 +29,11 @@ export default function List() {
             ))}
         </div>
     )
+}
+
+List.getInitialProps = async () => {
+    const response = await fetch('http://localhost:4001/data');
+    const ownersList = await response.json();
+    console.log('ownersList', ownersList);
+    return { owners: ownersList }
 }

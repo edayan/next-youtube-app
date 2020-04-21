@@ -2,49 +2,49 @@
   "data": [
     {
       "_id": "5e9d0743df53727f63a55234",
-      "name": "Willie",
+      "ownerName": "Willie",
       "vehicle": "CAR",
       "details": "Eiusmod minim sint reprehenderit sunt officia voluptate in commodo exercitation. Amet laborum esse voluptate consectetur consectetur pariatur dolore proident id id. Sunt ut nulla mollit sit amet ullamco sint excepteur. Voluptate irure ipsum officia occaecat consequat nostrud."
     },
     {
       "_id": "5e9d0743ceb7486d6f4e47a0",
-      "name": "Parker",
+      "ownerName": "Parker",
       "vehicle": "BOAT",
       "details": "Ad sint eiusmod id et laborum aliquip mollit sunt aliquip duis deserunt reprehenderit pariatur mollit. Culpa tempor mollit eu est nisi aliqua ut. Est commodo mollit laboris esse occaecat laboris pariatur."
     },
     {
       "_id": "5e9d074345de905754ddc1f5",
-      "name": "Jeanette",
+      "ownerName": "Jeanette",
       "vehicle": "PLANE",
       "details": "In duis ea tempor incididunt quis aliquip labore anim. Id ullamco eu nulla ipsum exercitation veniam ex in aute. Nisi aute ea adipisicing non amet laboris elit proident esse laboris quis do cupidatat."
     },
     {
       "_id": "5e9d0743d6a4368f25f77024",
-      "name": "Agnes",
+      "ownerName": "Agnes",
       "vehicle": "BIKE",
       "details": "Quis irure dolor sunt ad velit. Culpa ad nostrud cupidatat pariatur qui sunt in dolor nostrud tempor nulla ipsum ad. Do ullamco in esse qui consequat cillum proident do non."
     },
     {
       "_id": "5e9d074358a8b363a3fa6e25",
-      "name": "Clare",
+      "ownerName": "Clare",
       "vehicle": "AUTO",
       "details": "Eu veniam proident cillum tempor. Cillum occaecat voluptate eiusmod voluptate. Reprehenderit quis culpa irure sint eiusmod ut culpa velit proident eu fugiat culpa ullamco cillum. Eu amet deserunt exercitation fugiat excepteur non sit. Anim dolore nostrud cupidatat do consectetur. Culpa reprehenderit aliquip adipisicing labore sit do consequat ea. Ea velit quis veniam tempor aliqua ut commodo quis est veniam consectetur incididunt duis consequat."
     },
     {
       "_id": "5e9d0743aab24f38648ad748",
-      "name": "Darlene",
+      "ownerName": "Darlene",
       "vehicle": "BUS",
       "details": "Qui dolor qui labore ipsum veniam exercitation dolore aliquip aliquip. Ipsum magna elit eu duis non commodo magna dolor sit qui tempor id sunt. Minim officia aliqua eiusmod aliquip incididunt Lorem do do elit incididunt dolor eiusmod nisi nisi."
     },
     {
       "_id": "5e9d074367fd68ea9cca1a86",
-      "name": "Maryann",
+      "ownerName": "Maryann",
       "vehicle": "JEEP",
       "details": "Aliqua anim voluptate laborum quis dolore minim pariatur. Id ullamco cillum Lorem et ullamco voluptate incididunt commodo est eu. Laborum in ut aliqua sit."
     },
     {
       "_id": "5e9d0743d49297db9528c122",
-      "name": "Francesca",
+      "ownerName": "Francesca",
       "vehicle": "CYCLE",
       "details": "Magna aute laboris reprehenderit est voluptate amet enim ullamco cillum tempor amet. Do enim ad consequat laboris elit et sunt exercitation cillum veniam mollit voluptate adipisicing. Exercitation magna ad ipsum veniam duis anim. Aliquip irure ea nulla non esse eu adipisicing ad duis duis. Dolore do minim eu eu ad."
     }
