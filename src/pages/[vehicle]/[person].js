@@ -1,14 +1,36 @@
 import {useRouter} from 'next/router'
-export default function person({owners}) {
+import {useState, useEffect} from 'react'
 
-const router= useRouter();
+export default function person({ownersList}) {
 
-return <pre>{JSON.stringify(owners, null, 4)}</pre>
+    const [owners, setOwners] = useState(ownersList)
+    const router = useRouter();
+
+    useEffect(() => {
+        async function loadData() {
+            const response = await fetch(`http://localhost:4001/data?ownerName=${router.query.person}&vehicle=${router.query.vehicle}`);
+            const ownersList = await response.json();
+            setOwners(ownersList);
+        }
+
+        if (ownersList.length == 0) {
+            loadData();
+        }
+
+    }, []);
+
+
+
+    return <pre>{JSON.stringify(owners, null, 4)}</pre>
 }
 
-person.getInitialProps = async () => {
-    const response = await fetch(`http://localhost:4001/data?vehicle=CAR`);
+person.getInitialProps = async (ctx) => {
+    if(!ctx.req) {
+        return {ownersList: []}
+    }
+    const {query} = ctx;
+
+    const response = await fetch(`http://localhost:4001/data?ownerName=${query.person}&vehicle=${query.vehicle}`);
     const ownersList = await response.json();
-    console.log('ownersList', ownersList);
-    return { owners: ownersList }
+    return {ownersList: ownersList}
 }

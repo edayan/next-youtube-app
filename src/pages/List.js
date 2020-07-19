@@ -34,6 +34,5 @@ export default function List({ owners }) {
 List.getInitialProps = async () => {
     const response = await fetch('http://localhost:4001/data');
     const ownersList = await response.json();
-    console.log('ownersList', ownersList);
     return { owners: ownersList }
 }
