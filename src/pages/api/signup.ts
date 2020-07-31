@@ -12,7 +12,7 @@ const signup = async (req : NextApiRequest, res: NextApiResponse) => {
             const result = await statement.run(req.body.name, req.body.email, hash);
             result.finalize();
     
-            const person = await db.all(`select id, name, email, password from person`);
+            const person = await db.all(`select id, name, email  from person`);
             res.json(person);
         });
         
