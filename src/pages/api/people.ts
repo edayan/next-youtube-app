@@ -1,12 +1,11 @@
-import {NextApiRequest, NextApiResponse} from 'next'
+import { NextApiRequest, NextApiResponse, NextApiHandler } from 'next'
 import sqlite from 'sqlite'
+import authenticated from '../../../Api/authenticated';
 
-const getPeople = async (req : NextApiRequest, res: NextApiResponse) => {
+const getPeople = authenticated(async (req: NextApiRequest, res: NextApiResponse) => {
     const db = await sqlite.open('./mydb.sqlite');
-    const people = await db.all(`select * from person`);
-
-
+    const people = await db.all(`select id, name, email from person`);
     res.json(people);
-}
+})
 
 export default getPeople;

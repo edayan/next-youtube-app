@@ -9,7 +9,7 @@ const getPersonById = async (req : NextApiRequest, res: NextApiResponse) => {
         const result = await statement.run(req.body.name, req.body.email, req.query.id);
         result.finalize();
     }
-    const person = await db.get(`select * from person where id= ?`, [req.query.id]);
+    const person = await db.get(`select id, name, email from person where id= ?`, [req.query.id]);
 
     res.json(person);
 }
